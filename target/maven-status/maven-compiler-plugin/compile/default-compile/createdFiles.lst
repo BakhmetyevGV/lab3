@@ -1,9 +1,5 @@
-AirportWritableComparable.class
-Time.class
-AirportParser.class
-FlightMapper.class
 FlightParser.class
-AirportMapper.class
-Reducer.class
-Partitioner.class
-GroupingComparator.class
+FlightData.class
+AirportTime.class
+FlightSerializable.class
+AirportParser.class
