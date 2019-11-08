@@ -6,6 +6,6 @@ public class AirportTime{
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        sc.textFile();
+        JavaSparkContext.textFile();
     }
 }
