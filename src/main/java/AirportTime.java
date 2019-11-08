@@ -53,7 +53,10 @@ public class AirportTime{
                                     + "\n MaxDelay:"
                                     + e._2.maxDelay
                                     + "\n % of delayed : "
-                                    + (double) e._2.delaysCount /  (double) e._2.flightsCount
+                                    + (double) e._2.delaysCount /  (double) e._2.flightsCount * 100
+                                    + "\n % of canceled : "
+                                    + (double) e._2.cancelationCount /  (double) e._2.flightsCount * 100
+                                    + "---------------------------------------------";
                         }
                 )
     }
