@@ -2,6 +2,7 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import scala.Tuple2;
 
 public class AirportTime{
     public static void main(String[] args){
@@ -18,8 +19,8 @@ public class AirportTime{
             return AirportParser.parse(s);
         });
 
-        JavaPairRDD<JavaRDD<String>, FlightSerializable> b = flights.mapToPair(e -> {
-            return 0;
+        JavaPairRDD<Tuple2<String, String>, FlightSerializable> flightPairs = flights.mapToPair(e -> {
+            FlightData d = new FlightData(e[])
         });
     }
 }
