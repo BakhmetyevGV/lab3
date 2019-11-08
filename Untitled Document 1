@@ -1,0 +1,2 @@
+spark-submit --class AirportTime --master yarn-client --num-
+executors 3 ~/lab3/target/spark-examples-1.0-SNAPSHOT.jar
