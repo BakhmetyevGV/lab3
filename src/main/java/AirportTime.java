@@ -48,7 +48,8 @@ public class AirportTime{
                             return
                                     e._1._1 + " " + airportsBroadcasted.value().get(e._1._1)
                                     + "->"
-                                    + 
+                                    + e._1._2 + " " + airportsBroadcasted.value().get(e._1._2)
+                                    +
                         }
                 )
     }
