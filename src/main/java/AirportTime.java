@@ -7,6 +7,6 @@ public class AirportTime{
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        JavaRDD<String> a =  JavaSparkContext.textFile();
+        JavaRDD<String> a =  JavaSparkContext.textFile("Flights.csv");
     }
 }
