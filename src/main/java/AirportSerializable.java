@@ -17,8 +17,8 @@ public class AirportSerializable  implements Serializable {
     public AirportSerializable(FlightData oData) {
         this.flightsCount = 1;
         this.delaysCount = oData.delays;
-        this.maxDelay = maxDelay;
-        this.cancelationCount = cancelationCount;
+        this.maxDelay = oData.delays;
+
     }
 
 }
