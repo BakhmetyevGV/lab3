@@ -33,9 +33,7 @@ public class AirportTime{
 
         JavaPairRDD<String, String> airportPairs = airports
                 .mapToPair( e -> {
-                        new Tuple2<>(
-                                
-                        )
+                        return new Tuple2<>(e[0], e[0])
                     );
                 });
 
