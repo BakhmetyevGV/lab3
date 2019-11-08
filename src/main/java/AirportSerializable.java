@@ -14,5 +14,11 @@ public class AirportSerializable  implements Serializable {
         this.cancelationCount = cancelationCount;
     }
 
-    
+    public AirportSerializable(int flightsCount, int delaysCount, int maxDelay, int cancelationCount) {
+        this.flightsCount = flightsCount;
+        this.delaysCount = delaysCount;
+        this.maxDelay = maxDelay;
+        this.cancelationCount = cancelationCount;
+    }
+
 }
