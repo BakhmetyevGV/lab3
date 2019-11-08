@@ -8,7 +8,9 @@ public class AirportTime{
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sparkContext = new JavaSparkContext(conf);
 
-        JavaRDD<String> a =  sparkContext.textFile("Flights.csv");
+        JavaRDD<String> flightsTextFile =  sparkContext.textFile("Flights.csv");
+        JavaRDD<String> flights = 
+
         JavaPairRDD<JavaRDD<String>, FlightSerializable> b = a.mapToPair(e -> {
             return 0;
         });
