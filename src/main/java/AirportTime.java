@@ -48,13 +48,12 @@ public class AirportTime{
                                 + e._1._1 + " " + airportsBroadcasted.value().get(e._1._1)
                                 + "->"
                                 + e._1._2 + " " + airportsBroadcasted.value().get(e._1._2)
-                                + "\n MaxDelay:"
+                                + ","
                                 + e._2.maxDelay
-                                + "\n % of delayed : "
+                                + ","
                                 + (double) e._2.delaysCount /  (double) e._2.flightsCount * 100
-                                + "\n % of canceled : "
+                                + ","
                                 + (double) e._2.cancelationCount /  (double) e._2.flightsCount * 100
-                                + "---------------------------------------------"
                 );
         res.saveAsTextFile("output");
     }
