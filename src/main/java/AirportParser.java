@@ -3,15 +3,16 @@ import java.util.Arrays;
 public class AirportParser  {
     private static String[] EMPTY = {};
     private static int FIRST_ELEMENT = 0;
+    private static String DELIMETER= ",";
 
-    public static String[] parse(String data, String delimeter){
-        return removeQuotes(split(data, delimeter));
+    public static String[] parse(String data){
+        return removeQuotes(split(data));
     }
 
-    private static String[] split(String data, String delimeter){
+    private static String[] split(String data){
         String[] columns = {};
 
-        columns = data.split(delimeter, 2);
+        columns = data.split(DELIMETER, 2);
 
         if(columns[FIRST_ELEMENT].equals("Code"))
             return EMPTY;
