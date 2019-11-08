@@ -19,12 +19,13 @@ public class AirportTime{
                 .map(AirportParser::parse)
                 .filter(e -> e.length != 0);
 
-        JavaPairRDD<Tuple2<String, String>, FlightSerializable> flightPairs = flights.mapToPair(e -> {
-            FlightData d = new FlightData(e[18], e[19]);
-            return new Tuple2<>(
-                new Tuple2<>(e[11], e[14]),
-                new FlightSerializable(d)
-            );
-        });
+        JavaPairRDD<Tuple2<String, String>, FlightSerializable> flightPairs = flights
+                .mapToPair( e -> {
+                    FlightData d = new FlightData(e[18], e[19]);
+                    return new Tuple2<>(
+                        new Tuple2<>(e[11], e[14]),
+                        new FlightSerializable(d)
+                    );
+                });
     }
 }
