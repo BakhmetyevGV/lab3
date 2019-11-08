@@ -52,6 +52,7 @@ public class AirportTime{
                                     + e._1._2 + " " + airportsBroadcasted.value().get(e._1._2)
                                     + "\n MaxDelay:"
                                     + e._1._2.maxDelay
+                                    + "\n % of delayed : "
                                     + 
                         }
                 )
