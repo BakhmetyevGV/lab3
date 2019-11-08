@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class AirportTime{
     public static void main(String[] args){
-        SparkConf conf = new SparkConf().setAppName("lab3");
+        SparkConf conf = new SparkConf().setAppName("lab3")
         JavaSparkContext sparkContext = new JavaSparkContext(conf);
 
         JavaRDD<String> flightsTextFile =  sparkContext.textFile("Flights.csv");
