@@ -28,6 +28,7 @@ public class AirportTime{
                     );
                 });
 
-        JavaPairRDD<Tuple2<String, String>, FlightSerializable>
+        JavaPairRDD<Tuple2<String, String>, FlightSerializable> flightSerializable = flightPairs
+                .reduceByKey(FlightSerializable::reduce);
     }
 }
