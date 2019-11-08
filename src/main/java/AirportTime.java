@@ -9,7 +9,9 @@ import java.util.Map;
 
 public class AirportTime{
     public static void main(String[] args){
-        SparkConf conf = new SparkConf().setAppName("lab3")
+        SparkConf conf = new SparkConf().setAppName("lab3").setMaster("yarn")
+                .set("spark.hadoop.yarn.resourcemanager.hostname", "resourcemanager.fqdn")
+                .set("spark.hadoop.yarn.resourcemanager.address", "resourcemanager.fqdn:8032");
         JavaSparkContext sparkContext = new JavaSparkContext(conf);
 
         JavaRDD<String> flightsTextFile =  sparkContext.textFile("Flights.csv");
