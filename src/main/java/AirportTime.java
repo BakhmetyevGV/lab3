@@ -9,6 +9,8 @@ public class AirportTime{
         JavaSparkContext sparkContext = new JavaSparkContext(conf);
 
         JavaRDD<String> a =  sparkContext.textFile("Flights.csv");
-        JavaPairRDD<> b = a.
+        JavaPairRDD<JavaRDD<String>, > b = a.mapToPair(e -> {
+            return 0;
+        });
     }
 }
