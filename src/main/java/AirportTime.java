@@ -1,4 +1,5 @@
 import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 
@@ -8,5 +9,6 @@ public class AirportTime{
         JavaSparkContext sparkContext = new JavaSparkContext(conf);
 
         JavaRDD<String> a =  sparkContext.textFile("Flights.csv");
+        JavaPairRDD<> b = a.
     }
 }
