@@ -46,10 +46,13 @@ public class AirportTime{
                 .map(
                         e ->{
                             return
-                                    e._1._1 + " " + airportsBroadcasted.value().get(e._1._1)
+                                    "\n"
+                                    + e._1._1 + " " + airportsBroadcasted.value().get(e._1._1)
                                     + "->"
                                     + e._1._2 + " " + airportsBroadcasted.value().get(e._1._2)
-                                    +
+                                    + "\n MaxDelay:"
+                                    + e._1._2.maxDelay
+                                    + 
                         }
                 )
     }
