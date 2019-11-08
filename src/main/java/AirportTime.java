@@ -4,6 +4,8 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import scala.Tuple2;
 
+import java.util.Map;
+
 public class AirportTime{
     public static void main(String[] args){
         SparkConf conf = new SparkConf().setAppName("lab3");
@@ -34,7 +36,9 @@ public class AirportTime{
         JavaPairRDD<String, String> airportPairs = airports
                 .mapToPair( e -> new Tuple2<>(e[0], e[1]));
 
-        JavaPairRDD<String, String> airportMap = airportPairs.collectAsMap();
+        Map<String, String> airportMap = airportPairs.collectAsMap();
 
+
+        
     }
 }
