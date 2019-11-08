@@ -14,7 +14,9 @@ public class AirportSerializable  implements Serializable {
         this.flightsCount     =  1;
     }
 
-    public static AirportSerializable reduce(AirportSerializable obj1, AirportSerializable obj2){
-
+    public static AirportSerializable reduce(AirportSerializable a, AirportSerializable b){
+        return new AirportSerializable(
+                
+        )
     }
 }
