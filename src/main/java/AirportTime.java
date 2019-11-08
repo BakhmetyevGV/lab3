@@ -46,9 +46,9 @@ public class AirportTime{
                 .map(
                         e ->{
                             return
-                                    e._1._1 + "->" + airportsBroadcasted.value().get(e._1._1)
+                                    e._1._1 + " " + airportsBroadcasted.value().get(e._1._1)
+                                    + "->"
                                     + 
-
                         }
                 )
     }
