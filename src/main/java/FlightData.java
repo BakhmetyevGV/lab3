@@ -2,8 +2,8 @@ public class FlightData {
     public int delays;
     public int cancelations;
 
-    public FlightData(int delays, int cancelations) {
-        this.delays = delays;
+    public FlightData(String delays, String cancelations) {
+        this.delays = delays.isEmpty() ? 0 : (int) Double.parseDouble(delays) ;
         this.cancelations = cancelations;
     }
 }
