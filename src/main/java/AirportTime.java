@@ -42,5 +42,6 @@ public class AirportTime{
         final Broadcast<Map<String, String>> airportsBroadcasted =
                 sparkContext.broadcast(airportMap);
 
+        JavaPairRDD<>
     }
 }
