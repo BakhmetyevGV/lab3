@@ -30,5 +30,14 @@ public class AirportTime{
 
         JavaPairRDD<Tuple2<String, String>, FlightSerializable> flightSerializable = flightPairs
                 .reduceByKey(FlightSerializable::reduce);
+
+        JavaPairRDD<Tuple2<String, String>, FlightSerializable> airportPairs = airports
+                .mapToPair( e -> {
+                    
+                    );
+                });
+
+        JavaPairRDD<Tuple2<String, String>, FlightSerializable> flightSerializable = flightPairs
+                .reduceByKey(FlightSerializable::reduce);
     }
 }
