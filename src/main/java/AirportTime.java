@@ -45,7 +45,8 @@ public class AirportTime{
         JavaPairRDD<String, String> res = flightSerializable
                 .map(
                         e ->{
-                            return 
+                            return
+                                    e._1._1 + "->" + airportsBroadcasted.value().get()
                         }
                 )
     }
