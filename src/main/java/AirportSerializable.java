@@ -13,4 +13,6 @@ public class AirportSerializable  implements Serializable {
         this.maxDelay = maxDelay;
         this.cancelationCount = cancelationCount;
     }
+
+    
 }
