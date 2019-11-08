@@ -38,7 +38,8 @@ public class AirportTime{
 
         Map<String, String> airportMap = airportPairs.collectAsMap();
 
+        final Broadcast<Map<String, FlightData>> airportsBroadcasted =
+                sparkContext.broadcast(stringAirportDataMap);
 
-        
     }
 }
