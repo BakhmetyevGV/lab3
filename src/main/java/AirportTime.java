@@ -58,6 +58,6 @@ public class AirportTime{
                                     + (double) e._2.cancelationCount /  (double) e._2.flightsCount * 100
                                     + "---------------------------------------------";
                         }
-                )
+                );
     }
 }
