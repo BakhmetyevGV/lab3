@@ -27,5 +27,7 @@ public class AirportTime{
                         new FlightSerializable(d)
                     );
                 });
+
+        JavaPairRDD<Tuple2<String, String>, FlightSerializable>
     }
 }
