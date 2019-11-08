@@ -22,7 +22,8 @@ public class AirportTime{
         JavaPairRDD<Tuple2<String, String>, FlightSerializable> flightPairs = flights.mapToPair(e -> {
             FlightData d = new FlightData(e[18], e[19]);
             return new Tuple2<>(
-                    Tuple2<>(e[], e[])
+                    Tuple2<>(e[11], e[14]),
+                        new FlightSerializable(d)
             );
         });
     }
