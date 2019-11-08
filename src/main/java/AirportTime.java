@@ -10,12 +10,12 @@ public class AirportTime{
         JavaSparkContext sparkContext = new JavaSparkContext(conf);
 
         JavaRDD<String> flightsTextFile =  sparkContext.textFile("Flights.csv");
-        JavaRDD<String[]> flights = flightsTextFile.map(FlightParser::parse);
+        JavaRDD<String[]> flights = flightsTextFile
+                .map(FlightParser::parse)
+                .filter(e -> e.length != 0);
 
         JavaRDD<String> airportsTextFile =  sparkContext.textFile("Airports.csv");
-        JavaRDD<String[]> airports = flightsTextFile.map(s -> {
-            return AirportParser.parse(s);
-        });
+        JavaRDD<String[]> airports = flightsTextFile.map(AirportParser::parse);
 
         JavaPairRDD<Tuple2<String, String>, FlightSerializable> flightPairs = flights.mapToPair(e -> {
             FlightData d = new FlightData(e[18], e[19]);
